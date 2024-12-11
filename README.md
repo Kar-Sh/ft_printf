@@ -1,8 +1,8 @@
-# Printf 
+# Ft_printf 
 
 ## Project Description
 
-The **Libftprintf** project involves creating a custom implementation of the standard C library function `printf`. The goal is to develop a function named `ft_printf`, which handles formatted output based on a format string and supports various conversions and flags.
+The **Ft_printf** project involves creating a custom implementation of the standard C library function `printf`. The goal is to develop a function named `ft_printf`, which handles formatted output based on a format string and supports various conversions and flags.
 
 This project aims to help you gain a deeper understanding of variadic functions, formatting, and output handling while adhering to strict coding standards and project requirements.
 
