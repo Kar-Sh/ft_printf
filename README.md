@@ -32,11 +32,3 @@ The `libftprintf` project involves creating a custom library that contains the `
   - The Makefile should not relink files unnecessarily.
   - Must compile the library using the `ar` command (using `libtool` is forbidden).
 
-## Usage
-
-### Compilation
-
-To compile the program, run the following command:
-
-```bash
-make
