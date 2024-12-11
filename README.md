@@ -1,34 +1,113 @@
-# libftprintf
+# Libftprintf
 
-## Description
+## Project Description
 
-The `libftprintf` project involves creating a custom library that contains the `ft_printf` function, mimicking the behavior of the standard `printf` function in the C library (`libc`). This implementation re-creates `printf` without using its buffer management and handles various format specifiers, flags, and conversions.
+The **Libftprintf** project involves creating a custom implementation of the standard C library function `printf`. The goal is to develop a function named `ft_printf`, which handles formatted output based on a format string and supports various conversions and flags.
+
+This project aims to help you gain a deeper understanding of variadic functions, formatting, and output handling while adhering to strict coding standards and project requirements.
+
+---
 
 ## Features
 
-- **Prototype**: `int ft_printf(const char *, ...);`
-- **Conversions Supported**: 
-  - `c` (character)
-  - `s` (string)
-  - `p` (pointer)
-  - `d`, `i` (signed integer)
-  - `u` (unsigned integer)
-  - `x`, `X` (hexadecimal)
-  - `%` (literal percent symbol)
-- **Flags Supported**:
-  - `-` (left alignment)
-  - `0` (padding with zeros)
-  - `.*` (precision and width)
-  - Minimum field width for all conversions
+### Supported Conversions
 
-## Requirements
+- `c`: Character
+- `s`: String
+- `p`: Pointer
+- `d` / `i`: Decimal and Integer
+- `u`: Unsigned Integer
+- `x` / `X`: Hexadecimal (lowercase and uppercase)
 
-- **External Functions Used**:
-  - `malloc`, `free`, `write`, `va_start`, `va_arg`, `va_copy`, `va_end`
-  
-- **Makefile**:
-  - Must include at least the following rules: `$(NAME)`, `all`, `clean`, `fclean`, `re`
-  - Must use the following compiler flags: `-Wall`, `-Wextra`, `-Werror`
-  - The Makefile should not relink files unnecessarily.
-  - Must compile the library using the `ar` command (using `libtool` is forbidden).
+### Supported Flags
+
+- `-`: Left-justify the output within the field width.
+- `0`: Pad the field with zeros instead of spaces.
+- `. `: Precision specifier for numeric and string conversions.
+- Minimum field width handling.
+
+---
+
+## Mandatory Requirements
+
+- **Prototype**:  
+  `int ft_printf(const char *format, ...);`
+
+- **Prohibited Features**:  
+  - Buffer management like the standard `printf`.
+  - Use of external tools like `libtool`.
+
+- **Rules**:
+  - The output of `ft_printf` will be compared to the standard `printf`.
+  - The project must compile without any memory leaks.
+
+---
+
+## Installation and Compilation
+
+### Clone the repository
+
+```bash
+git clone <repository_url>
+cd libftprintf
+```
+
+### Compile the library
+
+```bash
+make
+```
+
+### Remove object files
+
+```bash
+make clean
+```
+
+### Remove all generated files
+
+```bash
+make fclean
+```
+
+### Recompile from scratch
+
+```bash
+make re
+```
+
+---
+
+## Usage
+
+### Including the library
+
+Include the `libftprintf.a` library and the header file in your project.
+
+```c
+#include "ft_printf.h"
+```
+
+### Example usage
+
+Use `ft_printf` in your program as follows:
+
+```c
+int main(void) {
+    ft_printf("Hello, %s! The number is: %d
+", "world", 42);
+    return 0;
+}
+```
+
+### Compile  project
+
+Link with `libftprintf.a` while compiling your project:
+
+```bash
+gcc main.c -L. -lftprintf -o my_program
+```
+
+---
+
 
