@@ -1,4 +1,4 @@
-# Libftprintf
+# Printf 
 
 ## Project Description
 
